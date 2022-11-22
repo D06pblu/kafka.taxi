@@ -77,7 +77,7 @@ public class Taxi {
     public static void main(String[] args) {
         TaxiSignalsConsumer taxiSignalsConsumer = new TaxiSignalsConsumer();
         TaxiDistanceCounter taxiDistanceCounter = new TaxiDistanceCounter();
-        Map<String, Double> distances = taxiDistanceCounter.getAllDistance(taxiSignalsConsumer.getTheFuckingList());
+        Map<String, Double> distances = taxiDistanceCounter.getAllDistance(taxiSignalsConsumer.getTaxiConsumerList());
         System.out.println("-*-*-*-*- \n"+distances);
         TaxiLastDistanceProducer taxiLastDistanceProducer = new TaxiLastDistanceProducer();
         taxiLastDistanceProducer.sendDataToTopic(distances);

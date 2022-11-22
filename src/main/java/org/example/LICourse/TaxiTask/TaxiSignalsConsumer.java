@@ -21,7 +21,7 @@ public class TaxiSignalsConsumer {
         String topic = "input";
         String readMethod = "earliest";
 
-        public List<Taxi> getTheFuckingList(){
+        public List<Taxi> getTaxiConsumerList(){
             List<Taxi> taxiList = new ArrayList<>();
 
         //create Consumer config
