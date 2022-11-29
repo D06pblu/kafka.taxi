@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Map;
 
 public class TaxiDistanceCounter {
-
     //взять полный List всех передвижений и разделить на отедльные таксишки с сохранением порядка движения
     public List<Taxi> getSeparateTaxiPath(List<Taxi> oldTaxiList, int taxiIDNumber){
         List<Taxi> tmpList = new ArrayList<>();

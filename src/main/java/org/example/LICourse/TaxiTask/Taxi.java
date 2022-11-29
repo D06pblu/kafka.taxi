@@ -79,8 +79,11 @@ public class Taxi {
         TaxiDistanceCounter taxiDistanceCounter = new TaxiDistanceCounter();
         Map<String, Double> distances = taxiDistanceCounter.getAllDistance(taxiSignalsConsumer.getTaxiConsumerList());
         System.out.println("-*-*-*-*- \n"+distances);
-        TaxiLastDistanceProducer taxiLastDistanceProducer = new TaxiLastDistanceProducer();
-        taxiLastDistanceProducer.sendDataToTopic(distances);
+        TaxiCurrentDistanceProducer taxiCastDistanceProducer = new TaxiCurrentDistanceProducer();
+        taxiCastDistanceProducer.sendDataToTopic(distances);
+
+        TaxiCurrentDistanceConsumer taxiCurrentDistanceConsumer = new TaxiCurrentDistanceConsumer();
+        taxiCurrentDistanceConsumer.getTaxiCurrentDistances();
 
     }
 }

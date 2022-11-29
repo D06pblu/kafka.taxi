@@ -56,7 +56,6 @@ public class TaxiSignalsProducer {
                 producer.send(record, new Callback() {
                     @Override
                     public void onCompletion(RecordMetadata metadata, Exception exception) {
-                        //выполняется каждый раз когда сообщение посылается, или кидает ошибку
                         if (exception == null) {
 //                            logger.info("Recieved new Metadata. \n" +
 //                                    "Topic: " + metadata.topic() + "\n" +
@@ -71,7 +70,6 @@ public class TaxiSignalsProducer {
                 producer.flush();
             }
         }
-        //flush data and close producer. Or we can just producer.flush without closing
         producer.close();
     }
 }
