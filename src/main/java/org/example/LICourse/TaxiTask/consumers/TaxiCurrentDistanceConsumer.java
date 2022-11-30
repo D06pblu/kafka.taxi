@@ -1,4 +1,4 @@
-package org.example.LICourse.TaxiTask;
+package org.example.LICourse.TaxiTask.consumers;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;

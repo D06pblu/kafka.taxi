@@ -1,4 +1,4 @@
-package org.example.LICourse.TaxiTask;
+package org.example.LICourse.TaxiTask.producers;
 
 import org.apache.kafka.clients.producer.*;
 import org.apache.kafka.common.serialization.DoubleSerializer;

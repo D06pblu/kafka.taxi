@@ -1,6 +1,6 @@
-package org.example.LICourse.TaxiTask;
+package org.example.LICourse.TaxiTask.services;
 
-import java.util.Map;
+import java.util.Objects;
 
 public class Taxi {
     private String id;
@@ -52,6 +52,19 @@ public class Taxi {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Taxi taxi = (Taxi) o;
+        return Objects.equals(id, taxi.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
     public double setInitialLatitude() {
         double delta = ((Math.random() * 1000) + (Math.random() * 100) + (Math.random() * 10)) / 1000;
         double initialLatitude;
@@ -72,18 +85,5 @@ public class Taxi {
             initialLongitude = 27.2600 - delta;
         }
         return initialLongitude;
-    }
-
-    public static void main(String[] args) {
-        TaxiSignalsConsumer taxiSignalsConsumer = new TaxiSignalsConsumer();
-        TaxiDistanceCounter taxiDistanceCounter = new TaxiDistanceCounter();
-        Map<String, Double> distances = taxiDistanceCounter.getAllDistance(taxiSignalsConsumer.getTaxiConsumerList());
-        System.out.println("-*-*-*-*- \n"+distances);
-        TaxiCurrentDistanceProducer taxiCastDistanceProducer = new TaxiCurrentDistanceProducer();
-        taxiCastDistanceProducer.sendDataToTopic(distances);
-
-        TaxiCurrentDistanceConsumer taxiCurrentDistanceConsumer = new TaxiCurrentDistanceConsumer();
-        taxiCurrentDistanceConsumer.getTaxiCurrentDistances();
-
     }
 }

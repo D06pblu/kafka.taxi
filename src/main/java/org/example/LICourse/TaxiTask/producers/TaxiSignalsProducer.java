@@ -1,7 +1,8 @@
-package org.example.LICourse.TaxiTask;
+package org.example.LICourse.TaxiTask.producers;
 
 import org.apache.kafka.clients.producer.*;
 import org.apache.kafka.common.serialization.StringSerializer;
+import org.example.LICourse.TaxiTask.services.Taxi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

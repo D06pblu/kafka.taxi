@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="kafka-taxi" target="1.8" />
+      <module name="kafka-taxi" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

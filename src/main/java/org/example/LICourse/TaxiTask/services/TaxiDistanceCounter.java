@@ -1,4 +1,6 @@
-package org.example.LICourse.TaxiTask;
+package org.example.LICourse.TaxiTask.services;
+
+import org.example.LICourse.TaxiTask.producers.TaxiSignalsProducer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,7 +26,7 @@ public class TaxiDistanceCounter {
     public Map<String,Double> getAllDistance(List<Taxi> oldTaxiList){
         Map<String,Double> allDistances = new HashMap<>();
 
-        for(int n=0; n<TaxiSignalsProducer.n; n++){
+        for(int n = 0; n< TaxiSignalsProducer.n; n++){
             double path = 0;
             List<Taxi> tmpList1 = getSeparateTaxiPath(oldTaxiList, n);
 
