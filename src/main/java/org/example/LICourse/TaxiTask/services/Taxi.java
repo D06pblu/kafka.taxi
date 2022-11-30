@@ -1,8 +1,13 @@
 package org.example.LICourse.TaxiTask.services;
 
+
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
 import java.util.Objects;
 
+@JsonAutoDetect
 public class Taxi {
+
     private String id;
     private double latitude;
     private double longitude;

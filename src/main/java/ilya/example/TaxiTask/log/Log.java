@@ -1,5 +1,9 @@
 package ilya.example.TaxiTask.log;
 
+
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
+@JsonAutoDetect
 public class Log {
 
     private String message;

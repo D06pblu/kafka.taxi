@@ -1,10 +1,12 @@
 package ilya.example.TaxiTask.taxi;
 
-import com.fasterxml.jackson.databind.JsonSerializer;
+import com.fasterxml.jackson.databind.ser.std.JsonValueSerializer;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.common.serialization.ByteArraySerializer;
 import org.apache.kafka.common.serialization.StringSerializer;
+import org.example.LICourse.TaxiTask.services.JsonSerializer;
 import org.example.LICourse.TaxiTask.services.Taxi;
 
 import java.io.Closeable;
