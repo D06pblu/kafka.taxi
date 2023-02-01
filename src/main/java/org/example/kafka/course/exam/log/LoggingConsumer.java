@@ -1,17 +1,11 @@
-package ilya.example.TaxiTask.log;
+package org.example.kafka.course.exam.log;
 
-
-import com.fasterxml.jackson.databind.deser.std.JsonNodeDeserializer;
-import com.fasterxml.jackson.databind.deser.std.NumberDeserializers;
-import com.fasterxml.jackson.databind.ser.std.JsonValueSerializer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
-import org.apache.kafka.common.serialization.ByteArrayDeserializer;
 import org.apache.kafka.common.serialization.StringDeserializer;
-import org.example.LICourse.TaxiTask.services.JsonDeserializer;
-import org.example.LICourse.TaxiTask.services.LogJsonDeserializer;
+import org.example.kafka.course.exam.services.LogJsonDeserializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

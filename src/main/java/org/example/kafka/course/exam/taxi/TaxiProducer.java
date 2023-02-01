@@ -1,13 +1,10 @@
-package ilya.example.TaxiTask.taxi;
+package org.example.kafka.course.exam.taxi;
 
-import com.fasterxml.jackson.databind.ser.std.JsonValueSerializer;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
-import org.apache.kafka.common.serialization.ByteArraySerializer;
 import org.apache.kafka.common.serialization.StringSerializer;
-import org.example.LICourse.TaxiTask.services.JsonSerializer;
-import org.example.LICourse.TaxiTask.services.Taxi;
+import org.example.kafka.course.exam.services.JsonSerializer;
 
 import java.io.Closeable;
 import java.util.Properties;
@@ -20,13 +17,13 @@ public class TaxiProducer implements Closeable {
     private final KafkaProducer<String, Taxi> producer;
 
     public TaxiProducer() {
-        // Create Producer properties
+        // create Producer properties
         Properties properties = new Properties();
         properties.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, BOOTSTRAP_SERVERS);
         properties.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         properties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class.getName());
 
-        this.producer = new KafkaProducer<String, Taxi>(properties); // Create Producer
+        this.producer = new KafkaProducer<String, Taxi>(properties); // create Producer
     }
 
     public void sendDataToTopic(Taxi taxi) {

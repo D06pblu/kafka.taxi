@@ -1,6 +1,4 @@
-package ilya.example.TaxiTask.taxi;
-
-import org.example.LICourse.TaxiTask.services.Taxi;
+package org.example.kafka.course.exam.taxi;
 
 public class TaxiService {
 
@@ -12,7 +10,7 @@ public class TaxiService {
         return newTaxiDistance;
     }
 
-    private static double calculateDistance(Taxi oldTaxiPosition, Taxi newTaxiPosition) { // Имплементировать
+    private static double calculateDistance(Taxi oldTaxiPosition, Taxi newTaxiPosition) {
         double latitudeDelta = Math.abs(newTaxiPosition.getLatitude()-oldTaxiPosition.getLatitude());
         double longitudeDelta = Math.abs(newTaxiPosition.getLongitude()-oldTaxiPosition.getLongitude());
         double distance = Math.hypot(latitudeDelta, longitudeDelta)*111D;

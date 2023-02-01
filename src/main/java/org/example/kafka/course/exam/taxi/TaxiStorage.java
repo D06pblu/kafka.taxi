@@ -1,6 +1,5 @@
-package ilya.example.TaxiTask.taxi;
+package org.example.kafka.course.exam.taxi;
 
-import org.example.LICourse.TaxiTask.services.Taxi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

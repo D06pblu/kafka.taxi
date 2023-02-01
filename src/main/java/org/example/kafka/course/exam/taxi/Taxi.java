@@ -1,5 +1,4 @@
-package org.example.LICourse.TaxiTask.services;
-
+package org.example.kafka.course.exam.taxi;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 

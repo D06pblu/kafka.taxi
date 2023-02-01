@@ -1,5 +1,4 @@
-package ilya.example.TaxiTask.log;
-
+package org.example.kafka.course.exam.log;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 

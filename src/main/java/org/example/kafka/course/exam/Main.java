@@ -1,11 +1,11 @@
-package ilya.example.TaxiTask;
+package org.example.kafka.course.exam;
 
-import ilya.example.TaxiTask.log.LoggingConsumer;
-import ilya.example.TaxiTask.log.LoggingProducer;
-import ilya.example.TaxiTask.taxi.TaxiConsumer;
-import ilya.example.TaxiTask.taxi.TaxiProducer;
-import org.example.LICourse.TaxiTask.services.Taxi;
-import ilya.example.TaxiTask.taxi.TaxiStorage;
+import org.example.kafka.course.exam.log.LoggingConsumer;
+import org.example.kafka.course.exam.log.LoggingProducer;
+import org.example.kafka.course.exam.taxi.TaxiConsumer;
+import org.example.kafka.course.exam.taxi.TaxiProducer;
+import org.example.kafka.course.exam.taxi.Taxi;
+import org.example.kafka.course.exam.taxi.TaxiStorage;
 
 public class Main {
 
